@@ -21,7 +21,7 @@ router.post("/forgot-password", async (req, res) => {
     user.resetPasswordExpire = Date.now() + 10 * 60 * 1000; // valid for 10 minutes
     await user.save();
 
-    const resetURL = `http://localhost:5173/reset-password/${resetToken}`;
+    const resetURL = `https://mern-store-frontend-seven.vercel.app/reset-password/${resetToken}`;
 
     const testAccount = await nodemailer.createTestAccount();
 
