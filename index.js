@@ -8,7 +8,12 @@ const session = require("express-session"); // Middleware for managing sessions
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    // origin: "https://mern-store-frontend-seven.vercel.app/", // allow frontend domain
+    // credentials: true, // if using cookies
+  })
+);
 
 require("./config/passport"); // Passport configuration
 
