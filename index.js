@@ -10,8 +10,8 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    // origin: "https://mern-store-frontend-seven.vercel.app/", // allow frontend domain
-    // credentials: true, // if using cookies
+    origin: "https://mern-store-frontend-seven.vercel.app/", // allow frontend domain
+    credentials: true, // if using cookies
   })
 );
 
